@@ -1,0 +1,10 @@
+Mode Manif aide les personnes qui participent à une manifestation à réduire l'exposition de leur téléphone.
+
+<b>Un bandeau, une liste</b>
+Le bandeau dit si le téléphone est exposé, partiellement protégé ou discret, et pour quoi il est sécurisé : accès au contenu de l'appareil, suivi de la position, fingerprinting/identité, historique d'activité. Chaque réglage (radios, localisation, verrouillage, chiffrement, débogage USB, nom de l'appareil, micro de l'assistant…) porte un niveau de risque : critique, important ou conseillé.
+
+<b>Honnête</b>
+Android ne laisse presque jamais une app modifier un réglage elle-même. Mode Manif ouvre l'écran système adapté, puis relit l'état réel à votre retour. Un réglage n'est affiché conforme qu'après cette relecture.
+
+<b>Respectueux</b>
+Aucune connexion Internet, aucune collecte, aucun traceur, aucune permission dangereuse. Code source libre sous licence GPL v3.

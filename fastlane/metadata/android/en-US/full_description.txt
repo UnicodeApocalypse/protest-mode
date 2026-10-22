@@ -1,0 +1,10 @@
+Protest Mode helps people taking part in a protest reduce their phone's exposure.
+
+<b>One banner, one list</b>
+The banner tells whether the phone is exposed, partially protected or discreet, and what it is secure for: access to device content, location tracking, fingerprinting/identity, activity history. Every setting (radios, location, screen lock, encryption, USB debugging, device name, assistant microphone…) carries a risk level: critical, important or advised.
+
+<b>Honest</b>
+Android almost never lets an app change a setting by itself. Protest Mode opens the right system screen, then reads the real state again when you come back. A setting is only shown as compliant after that check.
+
+<b>Respectful</b>
+No Internet connection, no data collection, no trackers, no dangerous permission. Free and open source under the GPL v3.

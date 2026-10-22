@@ -1,0 +1,10 @@
+Modo Mani ayuda a quienes participan en una manifestación a reducir la exposición de su teléfono.
+
+<b>Un indicador, una lista</b>
+El indicador dice si el teléfono está expuesto, parcialmente protegido o es discreto, y frente a qué está protegido: acceso al contenido del dispositivo, seguimiento de la ubicación, fingerprinting/identidad, historial de actividad. Cada ajuste (radios, ubicación, bloqueo de pantalla, cifrado, depuración por USB, nombre del dispositivo, micrófono del asistente…) tiene un nivel de riesgo: crítico, importante o recomendado.
+
+<b>Honesta</b>
+Android casi nunca permite que una aplicación cambie un ajuste por sí misma. Modo Mani abre la pantalla del sistema adecuada y vuelve a leer el estado real cuando regresas. Un ajuste solo se muestra como correcto después de esa comprobación.
+
+<b>Respetuosa</b>
+Sin conexión a Internet, sin recogida de datos, sin rastreadores, sin permisos peligrosos. Software libre con licencia GPL v3.

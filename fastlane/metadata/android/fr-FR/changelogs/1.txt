@@ -1,0 +1,1 @@
+Première version : bandeau d'exposition, labels de protection et liste des réglages par niveau de risque.

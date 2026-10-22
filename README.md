@@ -53,6 +53,8 @@ APKs installed from F-Droid are built and signed by F-Droid with its own key.
 
 Logo (`art/logo.svg`): original work of the project. The text of the English, Spanish and Italian variants is set in BentonSans Comp Bold, a commercial font that is not distributed: only the rendered icons are versioned.
 
+Store feature graphic (`fastlane/`): public domain photo (CC0, rawpixel no. 3336870), dithered, cropped and captioned.
+
 ## License
 
 GNU GPL v3 or later. See [LICENSE](LICENSE).

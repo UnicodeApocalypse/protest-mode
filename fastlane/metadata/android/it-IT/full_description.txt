@@ -1,0 +1,10 @@
+Modalità Manifestazione aiuta chi partecipa a una manifestazione a ridurre l'esposizione del proprio telefono.
+
+<b>Un indicatore, un elenco</b>
+L'indicatore dice se il telefono è esposto, parzialmente protetto o discreto, e contro cosa è protetto: accesso ai contenuti del dispositivo, tracciamento della posizione, fingerprinting/identità, cronologia delle attività. Ogni impostazione (radio, posizione, blocco schermo, crittografia, debug USB, nome del dispositivo, microfono dell'assistente…) ha un livello di rischio: critico, importante o consigliato.
+
+<b>Onesta</b>
+Android non permette quasi mai a un'app di modificare un'impostazione da sola. Modalità Manifestazione apre la schermata di sistema giusta e rilegge lo stato reale quando torni. Un'impostazione è indicata come conforme solo dopo questa verifica.
+
+<b>Rispettosa</b>
+Nessuna connessione a Internet, nessuna raccolta di dati, nessun tracker, nessuna autorizzazione pericolosa. Software libero con licenza GPL v3.
