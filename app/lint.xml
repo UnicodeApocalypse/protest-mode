@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- targetSdk follows the Google Play requirement, not the newest platform. -->
+    <issue id="OldTargetApi" severity="ignore" />
+    <issue id="PluralsCandidate" severity="ignore" />
+</lint>
