@@ -47,6 +47,8 @@ BE:5A:AE:DD:D0:2A:EE:76:CB:0A:2F:87:B2:07:11:17:57:D0:99:51:DB:C9:D8:F0:75:D0:41
 apksigner verify --print-certs protest-mode-<version>.apk
 ```
 
+APKs installed from F-Droid are built and signed by F-Droid with its own key.
+
 ## Credits
 
 Logo (`art/logo.svg`): original work of the project. The text of the English, Spanish and Italian variants is set in BentonSans Comp Bold, a commercial font that is not distributed: only the rendered icons are versioned.
