@@ -1,1 +1,1 @@
-First release: exposure banner, protection labels and settings list by risk level.
+First version of the app
