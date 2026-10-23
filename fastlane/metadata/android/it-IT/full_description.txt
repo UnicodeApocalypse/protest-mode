@@ -1,10 +1,13 @@
 Modalità Manifestazione ti aiuta a verificare e configurare il tuo telefono per limitare i rischi quando partecipi alle manifestazioni.
 
 <b>Panoramica chiara e rapida</b>
+
 Verifica a colpo d'occhio la riservatezza del tuo telefono. Il rischio è espresso in livelli, con categorie semplici e comprensibili.
 
 <b>Passiva</b>
+
 L'app non modifica nulla senza il tuo consenso: controlla la configurazione e ti guida per adattarla in autonomia.
 
 <b>Riservata</b>
+
 Nessuna connessione a Internet, nessun tracker e nessuna raccolta di dati. Sviluppata come open source.

@@ -1,10 +1,13 @@
 Modo Mani te ayuda a comprobar y configurar tu teléfono para limitar los riesgos cuando participas en manifestaciones.
 
 <b>Visión clara y rápida</b>
+
 Comprueba de un vistazo la privacidad de tu teléfono. El riesgo se expresa por niveles, con categorías simples y comprensibles.
 
 <b>Pasiva</b>
+
 La aplicación no cambia nada sin tu consentimiento: comprueba la configuración y te guía para que la ajustes por tu cuenta.
 
 <b>Confidencial</b>
+
 Sin conexión a Internet, sin rastreadores y sin recogida de datos. Desarrollada como código abierto.

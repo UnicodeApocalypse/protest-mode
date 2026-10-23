@@ -1,10 +1,13 @@
 Mode Manif vous aide à vérifier et configurer votre téléphone pour limiter les risques lorsque vous participez aux manifestations.
 
 <b>Aperçu clair et rapide</b>
+
 Vérifiez en un seul coup d'œil la confidentialité de votre téléphone. Le risque est exprimé en niveau avec des catégories simples et compréhensibles.
 
 <b>Passif</b>
+
 L'application ne modifie rien sans votre accord : elle vérifie la configuration et vous guide pour l'adapter vous-même.
 
 <b>Confidentiel</b>
+
 Aucune connexion internet, pas de trackers ni aucune collecte de données. Développée en open-source.

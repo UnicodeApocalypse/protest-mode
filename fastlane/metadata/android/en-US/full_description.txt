@@ -1,10 +1,13 @@
 Protest Mode helps you check and set up your phone to limit the risks when you take part in protests.
 
 <b>Clear, quick overview</b>
+
 Check your phone's privacy at a glance. The risk is shown as a level, with simple and understandable categories.
 
 <b>Passive</b>
+
 The app changes nothing without your consent: it checks the configuration and guides you to adjust it yourself.
 
 <b>Private</b>
+
 No Internet connection, no trackers and no data collection. Developed as open source.
