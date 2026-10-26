@@ -10,6 +10,7 @@ import android.provider.Settings
  */
 internal object HiddenActions {
     const val LOCATION_SCANNING = "android.settings.LOCATION_SCANNING_SETTINGS"
+    const val WIFI_SCANNING = "android.settings.WIFI_SCANNING_SETTINGS"
     const val TETHER = "android.settings.TETHER_SETTINGS"
     const val UWB = "android.settings.UWB_SETTINGS"
     const val ADVANCED_CONNECTED_DEVICE = "android.settings.ADVANCED_CONNECTED_DEVICE_SETTINGS"

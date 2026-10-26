@@ -25,8 +25,14 @@
     <string name="target_not_ok">To turn off</string>
     <string name="target_not_ok_enable">To turn on</string>
     <string name="target_unknown">To check</string>
-    <string name="instruction_wifi_scan">Turn off “Wi‑Fi scanning” (Location › Location services).</string>
-    <string name="instruction_ble_scan">Turn off “Bluetooth scanning” (Location › Location services).</string>
+    <string name="instruction_wifi_scan">Turn off “Wi‑Fi scanning”.</string>
+    <string name="instruction_ble_scan">Turn off “Bluetooth scanning”.</string>
+    <string name="instruction_wifi_scan_menu">Location › ⋮ › Scanning: turn off “Wi‑Fi scanning”.</string>
+    <string name="instruction_wifi_scan_entry">Location › Scanning: turn off “Wi‑Fi scanning”.</string>
+    <string name="instruction_wifi_scan_vendor">In the location settings, turn off Wi‑Fi scanning.</string>
+    <string name="instruction_ble_scan_menu">Location › ⋮ › Scanning: turn off “Bluetooth scanning”.</string>
+    <string name="instruction_ble_scan_entry">Location › Scanning: turn off “Bluetooth scanning”.</string>
+    <string name="instruction_ble_scan_vendor">In the location settings, turn off Bluetooth scanning.</string>
     <string name="instruction_uwb">Turn UWB off (Connection preferences).</string>
     <string name="action_confirm">I checked</string>
     <string name="setting_row_a11y">%1$s: %2$s, %3$s</string>

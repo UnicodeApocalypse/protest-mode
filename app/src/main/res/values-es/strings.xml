@@ -25,8 +25,14 @@
     <string name="target_not_ok">Por desactivar</string>
     <string name="target_not_ok_enable">Por activar</string>
     <string name="target_unknown">Por comprobar</string>
-    <string name="instruction_wifi_scan">Desactiva «Búsqueda de redes Wi‑Fi» (Ubicación › Servicios de ubicación).</string>
-    <string name="instruction_ble_scan">Desactiva «Búsqueda de dispositivos Bluetooth» (Ubicación › Servicios de ubicación).</string>
+    <string name="instruction_wifi_scan">Desactiva «Búsqueda de redes Wi‑Fi».</string>
+    <string name="instruction_ble_scan">Desactiva «Búsqueda de dispositivos Bluetooth».</string>
+    <string name="instruction_wifi_scan_menu">Ubicación › ⋮ › Buscando: desactiva «Búsqueda de redes Wi‑Fi».</string>
+    <string name="instruction_wifi_scan_entry">Ubicación › Búsqueda: desactiva «Búsqueda de redes Wi‑Fi».</string>
+    <string name="instruction_wifi_scan_vendor">En los ajustes de ubicación, desactiva la búsqueda de redes Wi‑Fi.</string>
+    <string name="instruction_ble_scan_menu">Ubicación › ⋮ › Buscando: desactiva «Búsqueda de dispositivos Bluetooth».</string>
+    <string name="instruction_ble_scan_entry">Ubicación › Búsqueda: desactiva «Búsqueda de dispositivos Bluetooth».</string>
+    <string name="instruction_ble_scan_vendor">En los ajustes de ubicación, desactiva la búsqueda de dispositivos Bluetooth.</string>
     <string name="instruction_uwb">Desactiva «Banda ultraancha (UWB)» (Preferencias de conexión).</string>
     <string name="action_confirm">Ya lo he comprobado</string>
     <string name="setting_row_a11y">%1$s: %2$s, %3$s</string>

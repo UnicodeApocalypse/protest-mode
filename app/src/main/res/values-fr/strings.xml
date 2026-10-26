@@ -25,8 +25,14 @@
     <string name="target_not_ok">À couper</string>
     <string name="target_not_ok_enable">À activer</string>
     <string name="target_unknown">À vérifier</string>
-    <string name="instruction_wifi_scan">Désactivez « Recherche Wi‑Fi » (Localisation › Services de localisation).</string>
-    <string name="instruction_ble_scan">Désactivez « Recherche Bluetooth » (Localisation › Services de localisation).</string>
+    <string name="instruction_wifi_scan">Désactivez « Recherche Wi‑Fi ».</string>
+    <string name="instruction_ble_scan">Désactivez « Recherche Bluetooth ».</string>
+    <string name="instruction_wifi_scan_menu">Localisation › ⋮ › Recherche : désactivez « Recherche Wi‑Fi ».</string>
+    <string name="instruction_wifi_scan_entry">Localisation › Recherche : désactivez « Recherche Wi‑Fi ».</string>
+    <string name="instruction_wifi_scan_vendor">Dans les réglages de localisation, désactivez la recherche Wi‑Fi.</string>
+    <string name="instruction_ble_scan_menu">Localisation › ⋮ › Recherche : désactivez « Recherche Bluetooth ».</string>
+    <string name="instruction_ble_scan_entry">Localisation › Recherche : désactivez « Recherche Bluetooth ».</string>
+    <string name="instruction_ble_scan_vendor">Dans les réglages de localisation, désactivez la recherche Bluetooth.</string>
     <string name="instruction_uwb">Désactivez « Bande ultralarge (UWB) » (Préférences de connexion).</string>
     <string name="action_confirm">J\'ai vérifié</string>
     <string name="setting_row_a11y">%1$s : %2$s, %3$s</string>

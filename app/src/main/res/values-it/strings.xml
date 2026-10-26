@@ -25,8 +25,14 @@
     <string name="target_not_ok">Da disattivare</string>
     <string name="target_not_ok_enable">Da attivare</string>
     <string name="target_unknown">Da verificare</string>
-    <string name="instruction_wifi_scan">Disattiva «Ricerca di reti Wi‑Fi» (Posizione › Servizi di localizzazione).</string>
-    <string name="instruction_ble_scan">Disattiva «Scansione di dispositivi Bluetooth» (Posizione › Servizi di localizzazione).</string>
+    <string name="instruction_wifi_scan">Disattiva «Ricerca di reti Wi-Fi».</string>
+    <string name="instruction_ble_scan">Disattiva «Ricerca di dispositivi Bluetooth».</string>
+    <string name="instruction_wifi_scan_menu">Geolocalizzazione › ⋮ › Ricerca: disattiva «Ricerca di reti Wi-Fi».</string>
+    <string name="instruction_wifi_scan_entry">Geolocalizzazione › Ricerca: disattiva «Ricerca di reti Wi-Fi».</string>
+    <string name="instruction_wifi_scan_vendor">Nelle impostazioni di geolocalizzazione, disattiva la ricerca di reti Wi-Fi.</string>
+    <string name="instruction_ble_scan_menu">Geolocalizzazione › ⋮ › Ricerca: disattiva «Ricerca di dispositivi Bluetooth».</string>
+    <string name="instruction_ble_scan_entry">Geolocalizzazione › Ricerca: disattiva «Ricerca di dispositivi Bluetooth».</string>
+    <string name="instruction_ble_scan_vendor">Nelle impostazioni di geolocalizzazione, disattiva la ricerca di dispositivi Bluetooth.</string>
     <string name="instruction_uwb">Disattiva «UWB (Ultra-WideBand)» (Preferenze di connessione).</string>
     <string name="action_confirm">Ho verificato</string>
     <string name="setting_row_a11y">%1$s: %2$s, %3$s</string>

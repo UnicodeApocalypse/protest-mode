@@ -102,6 +102,9 @@
             <action android:name="android.settings.LOCATION_SOURCE_SETTINGS" />
         </intent>
         <intent>
+            <action android:name="android.settings.WIFI_SCANNING_SETTINGS" />
+        </intent>
+        <intent>
             <action android:name="android.settings.LOCATION_SCANNING_SETTINGS" />
         </intent>
         <intent>

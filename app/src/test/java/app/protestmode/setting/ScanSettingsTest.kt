@@ -3,11 +3,14 @@ package app.protestmode.setting
 import android.content.pm.PackageManager
 import android.provider.Settings
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import app.protestmode.R
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.robolectric.annotation.Config
+import org.robolectric.shadows.ShadowBuild
 
 @RunWith(AndroidJUnit4::class)
 class ScanSettingsTest {
@@ -39,6 +42,60 @@ class ScanSettingsTest {
         setFeature(PackageManager.FEATURE_BLUETOOTH_LE, false)
         assertTrue(WifiScanSetting.isAvailable(context))
         assertFalse(BleScanSetting.isAvailable(context))
+    }
+
+    @Test
+    fun detectsVendorSkins() {
+        assertTrue(ScanScreens.isVendorSkin("samsung", "samsung"))
+        assertTrue(ScanScreens.isVendorSkin("Xiaomi", "Redmi"))
+        assertTrue(ScanScreens.isVendorSkin("TECNO MOBILE LIMITED", "TECNO"))
+        assertFalse(ScanScreens.isVendorSkin("Google", "google"))
+        assertFalse(ScanScreens.isVendorSkin("motorola", "motorola"))
+    }
+
+    @Test
+    @Config(sdk = [23])
+    fun givesTheMenuPathBeforeAndroid8() {
+        assertEquals(R.string.instruction_wifi_scan_menu, WifiScanSetting.instructionRes)
+        assertEquals(R.string.instruction_ble_scan_menu, BleScanSetting.instructionRes)
+    }
+
+    @Test
+    @Config(sdk = [26])
+    fun givesTheScanningEntryOnAndroid8() {
+        assertEquals(R.string.instruction_wifi_scan_entry, WifiScanSetting.instructionRes)
+    }
+
+    @Test
+    @Config(sdk = [28])
+    fun namesTheSwitchOnlyWhenTheScreenOpensDirectly() {
+        assertEquals(R.string.instruction_wifi_scan, WifiScanSetting.instructionRes)
+        assertEquals(R.string.instruction_ble_scan, BleScanSetting.instructionRes)
+    }
+
+    @Test
+    fun givesNoMenuPathOnVendorSkins() {
+        ShadowBuild.setManufacturer("samsung")
+        assertEquals(R.string.instruction_wifi_scan_vendor, WifiScanSetting.instructionRes)
+        assertEquals(R.string.instruction_ble_scan_vendor, BleScanSetting.instructionRes)
+    }
+
+    @Test
+    @Config(sdk = [33])
+    fun opensTheWifiScanningPageWhenBluetoothScanningIsOff() {
+        Settings.Global.putInt(context.contentResolver, "ble_scan_always_enabled", 0)
+        assertEquals("android.settings.WIFI_SCANNING_SETTINGS", WifiScanSetting.guideActions().first())
+
+        Settings.Global.putInt(context.contentResolver, "ble_scan_always_enabled", 1)
+        assertEquals(BleScanSetting.guideActions(), WifiScanSetting.guideActions())
+    }
+
+    @Test
+    @Config(sdk = [33])
+    fun opensTheSharedScreenOnVendorSkins() {
+        ShadowBuild.setManufacturer("OPPO")
+        Settings.Global.putInt(context.contentResolver, "ble_scan_always_enabled", 0)
+        assertEquals(BleScanSetting.guideActions(), WifiScanSetting.guideActions())
     }
 
     @Test
