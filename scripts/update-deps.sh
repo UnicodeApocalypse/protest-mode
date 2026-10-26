@@ -45,6 +45,43 @@ if ! GRADLE_USER_HOME="$work/gradle-home" gradle --no-configuration-cache --writ
     die "Build failed while regenerating the checksums; previous file restored"
 fi
 
+# aapt2 ships one jar per host OS and Gradle only records the one of this machine; the other hosts
+# (the F-Droid build server runs Linux) get theirs, kept only if it matches the SHA-256 Google publishes.
+info "Adding the aapt2 jars of the other host systems"
+if ! python3 -I - "$metadata" "$work" <<'PY'
+import hashlib, re, sys, urllib.request
+metadata, work = sys.argv[1], sys.argv[2]
+text = open(metadata).read()
+pattern = re.compile(r'(<component group="com\.android\.tools\.build" name="aapt2" version="([^"]+)">\n)(.*?)(\s*</component>)', re.S)
+
+def complete(match):
+    head, version, body, tail = match.groups()
+    indent = re.match(r"\s*", body).group(0)
+    blocks = {name: block for block, name in re.findall(r'(<artifact name="([^"]+)">.*?</artifact>)', body, re.S)}
+    for host in ("linux", "osx", "windows"):
+        name = f"aapt2-{version}-{host}.jar"
+        if name in blocks:
+            continue
+        url = f"https://dl.google.com/android/maven2/com/android/tools/build/aapt2/{version}/{name}"
+        digest = hashlib.sha256(urllib.request.urlopen(url, timeout=120).read()).hexdigest()
+        published = urllib.request.urlopen(url + ".sha256", timeout=60).read().decode().split()[0]
+        if digest != published:
+            sys.exit(f"{name}: downloaded {digest}, published {published}")
+        blocks[name] = (f'<artifact name="{name}">\n{indent}   <sha256 value="{digest}" '
+                        f'origin="Google Maven, checked against the published SHA-256"/>\n{indent}</artifact>')
+        print(f"added {name}")
+    return head + indent + ("\n" + indent).join(blocks[k] for k in sorted(blocks)) + tail
+
+text, count = pattern.subn(complete, text)
+if count == 0:
+    sys.exit("no aapt2 component found")
+open(metadata, "w").write(text)
+PY
+then
+    restore
+    die "Could not add the aapt2 jars of the other hosts; previous file restored"
+fi
+
 flatten "$work/previous.xml" > "$work/previous.txt"
 flatten "$metadata" > "$work/current.txt"
 
