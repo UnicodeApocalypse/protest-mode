@@ -36,9 +36,11 @@ flatten() {
     ' "$1" | sort -u
 }
 
-info "Regenerating the checksums from scratch"
+# A warm Gradle cache resolves some metadata differently (a .pom instead of a .module, parent POMs
+# skipped): the checksums are recorded with an empty one, like a fresh clone or the F-Droid build server.
+info "Regenerating the checksums from scratch, with an empty Gradle cache"
 rm "$metadata"
-if ! gradle --write-verification-metadata sha256 "${tasks[@]}"; then
+if ! GRADLE_USER_HOME="$work/gradle-home" gradle --no-configuration-cache --write-verification-metadata sha256 "${tasks[@]}"; then
     restore
     die "Build failed while regenerating the checksums; previous file restored"
 fi
