@@ -1,0 +1,1 @@
+La búsqueda de redes Wi-Fi y de dispositivos Bluetooth y las notificaciones en la pantalla de bloqueo abren ahora la pantalla de ajustes adecuada según la versión de Android y la marca del teléfono, con instrucciones adaptadas.

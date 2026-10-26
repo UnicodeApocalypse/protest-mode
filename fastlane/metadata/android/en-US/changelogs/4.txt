@@ -1,0 +1,1 @@
+Wi-Fi and Bluetooth scanning and lock screen notifications now open the right settings screen for each Android version and phone brand, with matching instructions.

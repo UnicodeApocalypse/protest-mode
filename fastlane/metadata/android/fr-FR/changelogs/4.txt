@@ -1,0 +1,1 @@
+Les recherches Wi-Fi et Bluetooth et les notifications sur l'écran de verrouillage ouvrent désormais le bon écran de réglages selon la version d'Android et la marque du téléphone, avec des consignes adaptées.

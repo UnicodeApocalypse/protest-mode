@@ -1,0 +1,1 @@
+La ricerca di reti Wi-Fi e di dispositivi Bluetooth e le notifiche sulla schermata di blocco aprono ora la schermata delle impostazioni giusta in base alla versione di Android e alla marca del telefono, con istruzioni adeguate.
