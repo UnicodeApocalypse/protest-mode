@@ -1,0 +1,1 @@
+Build fixes for F-Droid. No change to the app.

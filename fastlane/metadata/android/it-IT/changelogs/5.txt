@@ -1,0 +1,1 @@
+Correzioni di compilazione per F-Droid. Nessuna modifica all'app.
