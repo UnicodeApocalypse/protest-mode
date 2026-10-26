@@ -87,8 +87,14 @@
     <string name="detail_voice_assistant">Acceso al micrófono: %1$s</string>
     <string name="instruction_screen_lock">Configura un PIN de al menos 6 dígitos o una contraseña.</string>
     <string name="instruction_biometrics">Elimina las huellas y el rostro (pueden obligarte a usarlos).</string>
-    <string name="instruction_lockscreen_notifications">Elige «No mostrar ninguna notificación», o desactiva «Notificaciones sensibles» si tienes bloqueo de pantalla.</string>
+    <string name="instruction_lockscreen_notifications">Con un bloqueo de pantalla, desactiva «Notificaciones sensibles».</string>
     <string name="instruction_lock_delay">El teléfono debe bloquearse en 1 minuto como máximo: reduce el «Tiempo de espera de la pantalla», pon «Bloquear tras tiempo de espera de la pantalla» en Inmediatamente y activa «Bloquear con botón de encendido».</string>
+    <string name="instruction_lockscreen_notifications_v6">Con un bloqueo de pantalla, elige «Ocultar notificaciones sensibles» en «Con dispositivo bloqueado».</string>
+    <string name="instruction_lockscreen_notifications_v7">Con un bloqueo de pantalla, elige «Ocultar notificaciones sensibles» en «En la pantalla de bloqueo».</string>
+    <string name="instruction_lockscreen_notifications_v9">Con un bloqueo de pantalla, elige «Ocultar contenido sensible» en «En la pantalla de bloqueo».</string>
+    <string name="instruction_lockscreen_notifications_v10">Con un bloqueo de pantalla, desactiva «Notificaciones sensibles».</string>
+    <string name="instruction_lockscreen_notifications_v16">Con un bloqueo de pantalla, desactiva «Mostrar contenido sensible».</string>
+    <string name="instruction_lockscreen_notifications_vendor">Con un bloqueo de pantalla, oculta el contenido de las notificaciones en la pantalla de bloqueo (ajustes de notificaciones).</string>
     <string name="instruction_encryption">Activa el cifrado y un bloqueo de pantalla.</string>
     <string name="instruction_developer_options">Desactiva «Usar Opciones para desarrolladores» (interruptor de arriba).</string>
     <string name="instruction_security_patch">Instala las actualizaciones. Si no hay ninguna, el teléfono ya no recibe soporte.</string>

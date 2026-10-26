@@ -15,7 +15,7 @@ internal object HiddenActions {
     const val UWB = "android.settings.UWB_SETTINGS"
     const val ADVANCED_CONNECTED_DEVICE = "android.settings.ADVANCED_CONNECTED_DEVICE_SETTINGS"
     const val FINGERPRINT = "android.settings.FINGERPRINT_SETTINGS"
-    const val LOCK_SCREEN = "android.settings.LOCK_SCREEN_SETTINGS"
+    const val LOCK_SCREEN_NOTIFICATIONS = "android.settings.LOCK_SCREEN_NOTIFICATIONS_SETTINGS"
     const val NOTIFICATION = "android.settings.NOTIFICATION_SETTINGS"
     const val DEVICE_NAME = "android.settings.DEVICE_NAME"
 

@@ -87,8 +87,14 @@
     <string name="detail_voice_assistant">Microphone access: %1$s</string>
     <string name="instruction_screen_lock">Set a PIN of at least 6 digits or a password.</string>
     <string name="instruction_biometrics">Remove fingerprints and face (you can be forced to use them).</string>
-    <string name="instruction_lockscreen_notifications">Choose “Don’t show any notifications”, or turn off “Sensitive notifications” if you have a screen lock.</string>
+    <string name="instruction_lockscreen_notifications">With a screen lock set, turn off “Sensitive notifications”.</string>
     <string name="instruction_lock_delay">The phone must lock within 1 minute: shorten “Screen timeout”, set “Lock after screen timeout” to Immediately and turn on “Power button instantly locks”.</string>
+    <string name="instruction_lockscreen_notifications_v6">With a screen lock set, set “When device is locked” to “Hide sensitive notification content”.</string>
+    <string name="instruction_lockscreen_notifications_v7">With a screen lock set, set “On the lock screen” to “Hide sensitive notification content”.</string>
+    <string name="instruction_lockscreen_notifications_v9">With a screen lock set, set “On lock screen” to “Hide sensitive content”.</string>
+    <string name="instruction_lockscreen_notifications_v10">With a screen lock set, turn off “Sensitive notifications”.</string>
+    <string name="instruction_lockscreen_notifications_v16">With a screen lock set, turn off “Show sensitive content”.</string>
+    <string name="instruction_lockscreen_notifications_vendor">With a screen lock set, hide the content of notifications on the lock screen (notification settings).</string>
     <string name="instruction_encryption">Turn on encryption and a screen lock.</string>
     <string name="instruction_developer_options">Turn off “Use developer options” (switch at the top).</string>
     <string name="instruction_security_patch">Install the updates. If none is offered, the phone is no longer supported.</string>

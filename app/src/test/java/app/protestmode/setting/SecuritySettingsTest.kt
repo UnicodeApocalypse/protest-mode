@@ -17,6 +17,7 @@ import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import org.robolectric.shadow.api.Shadow
 import org.robolectric.shadows.ShadowBiometricManager
+import org.robolectric.shadows.ShadowBuild
 
 @RunWith(AndroidJUnit4::class)
 class SecuritySettingsTest {
@@ -80,6 +81,59 @@ class SecuritySettingsTest {
         assertEquals(
             context.getString(R.string.detail_lockscreen_notifications),
             LockscreenNotificationsSetting.detail(context)
+        )
+    }
+
+    @Test
+    fun lockscreenNotificationsOpenTheNotificationScreens() {
+        assertEquals(
+            listOf("android.settings.LOCK_SCREEN_NOTIFICATIONS_SETTINGS", "android.settings.NOTIFICATION_SETTINGS"),
+            LockscreenNotificationsSetting.guideActions()
+        )
+    }
+
+    @Test
+    @Config(sdk = [23])
+    fun lockscreenNotificationsInstructionOnAndroid6() {
+        assertEquals(R.string.instruction_lockscreen_notifications_v6, LockscreenNotificationsSetting.instructionRes)
+    }
+
+    @Test
+    @Config(sdk = [26])
+    fun lockscreenNotificationsInstructionOnAndroid8() {
+        assertEquals(R.string.instruction_lockscreen_notifications_v7, LockscreenNotificationsSetting.instructionRes)
+    }
+
+    @Test
+    @Config(sdk = [28])
+    fun lockscreenNotificationsInstructionOnAndroid9() {
+        assertEquals(R.string.instruction_lockscreen_notifications_v9, LockscreenNotificationsSetting.instructionRes)
+    }
+
+    @Test
+    @Config(sdk = [29])
+    fun lockscreenNotificationsInstructionOnAndroid10() {
+        assertEquals(R.string.instruction_lockscreen_notifications_v10, LockscreenNotificationsSetting.instructionRes)
+    }
+
+    @Test
+    @Config(sdk = [33])
+    fun lockscreenNotificationsInstructionOnAndroid13() {
+        assertEquals(R.string.instruction_lockscreen_notifications, LockscreenNotificationsSetting.instructionRes)
+    }
+
+    @Test
+    @Config(sdk = [36])
+    fun lockscreenNotificationsInstructionOnAndroid16() {
+        assertEquals(R.string.instruction_lockscreen_notifications_v16, LockscreenNotificationsSetting.instructionRes)
+    }
+
+    @Test
+    fun lockscreenNotificationsInstructionOnVendorSkins() {
+        ShadowBuild.setManufacturer("OnePlus")
+        assertEquals(
+            R.string.instruction_lockscreen_notifications_vendor,
+            LockscreenNotificationsSetting.instructionRes
         )
     }
 

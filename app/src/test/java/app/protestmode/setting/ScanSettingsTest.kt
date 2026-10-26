@@ -46,11 +46,11 @@ class ScanSettingsTest {
 
     @Test
     fun detectsVendorSkins() {
-        assertTrue(ScanScreens.isVendorSkin("samsung", "samsung"))
-        assertTrue(ScanScreens.isVendorSkin("Xiaomi", "Redmi"))
-        assertTrue(ScanScreens.isVendorSkin("TECNO MOBILE LIMITED", "TECNO"))
-        assertFalse(ScanScreens.isVendorSkin("Google", "google"))
-        assertFalse(ScanScreens.isVendorSkin("motorola", "motorola"))
+        assertTrue(VendorSkin.matches("samsung", "samsung"))
+        assertTrue(VendorSkin.matches("Xiaomi", "Redmi"))
+        assertTrue(VendorSkin.matches("TECNO MOBILE LIMITED", "TECNO"))
+        assertFalse(VendorSkin.matches("Google", "google"))
+        assertFalse(VendorSkin.matches("motorola", "motorola"))
     }
 
     @Test

@@ -48,7 +48,7 @@
             <action android:name="android.settings.FINGERPRINT_SETTINGS" />
         </intent>
         <intent>
-            <action android:name="android.settings.LOCK_SCREEN_SETTINGS" />
+            <action android:name="android.settings.LOCK_SCREEN_NOTIFICATIONS_SETTINGS" />
         </intent>
         <intent>
             <action android:name="android.settings.NOTIFICATION_SETTINGS" />

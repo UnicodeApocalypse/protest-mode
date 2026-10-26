@@ -87,8 +87,14 @@
     <string name="detail_voice_assistant">Accès au micro : %1$s</string>
     <string name="instruction_screen_lock">Définissez un code PIN d\'au moins 6 chiffres ou un mot de passe.</string>
     <string name="instruction_biometrics">Supprimez empreintes et visage (on peut vous forcer à les utiliser).</string>
-    <string name="instruction_lockscreen_notifications">Choisissez « N\'afficher aucune notification », ou désactivez « Notifications sensibles » si vous avez un code.</string>
+    <string name="instruction_lockscreen_notifications">Avec un verrouillage d\'écran, désactivez « Notifications sensibles ».</string>
     <string name="instruction_lock_delay">Le téléphone doit se verrouiller en 1 minute maximum : réduisez le « Délai de mise en veille de l\'écran », réglez « Verrouiller après la mise en veille » sur Immédiatement et activez « Verrouiller instantanément avec le bouton Marche/Arrêt ».</string>
+    <string name="instruction_lockscreen_notifications_v6">Avec un verrouillage d\'écran, réglez « Si l\'appareil est verrouillé » sur « Masquer le contenu des notifications sensibles ».</string>
+    <string name="instruction_lockscreen_notifications_v7">Avec un verrouillage d\'écran, réglez « Sur l\'écran de verrouillage » sur « Masquer le contenu sensible des notifications ».</string>
+    <string name="instruction_lockscreen_notifications_v9">Avec un verrouillage d\'écran, réglez « Sur l\'écran de verrouillage » sur « Masquer le contenu sensible ».</string>
+    <string name="instruction_lockscreen_notifications_v10">Avec un verrouillage d\'écran, désactivez « Notifications de contenu sensible ».</string>
+    <string name="instruction_lockscreen_notifications_v16">Avec un verrouillage d\'écran, désactivez « Afficher le contenu sensible ».</string>
+    <string name="instruction_lockscreen_notifications_vendor">Avec un verrouillage d\'écran, masquez le contenu des notifications sur l\'écran de verrouillage (réglages des notifications).</string>
     <string name="instruction_encryption">Activez le chiffrement et un code de verrouillage.</string>
     <string name="instruction_developer_options">Désactivez « Utiliser les options pour les développeurs » (interrupteur en haut).</string>
     <string name="instruction_security_patch">Installez les mises à jour. Si aucune n\'est proposée, le téléphone n\'est plus suivi.</string>

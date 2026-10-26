@@ -11,20 +11,8 @@ import app.protestmode.R
 // AOSP groups both scans on one screen: Location > menu > Scanning (API 23-25), Location > Scanning
 // (API 26-27), "Scanning" opened directly (API 28-30), then "Location services", which links to each
 // (API 31+). It has a direct action for Wi-Fi scanning only (API 33+) and none for Bluetooth scanning.
-// Vendor skins (One UI, HyperOS, ColorOS, Funtouch OS, MagicOS, XOS...) arrange these screens their own
-// way: they get the shared screen and an instruction without a menu path.
+// Vendor skins get the shared screen.
 internal object ScanScreens {
-    private val vendorSkins =
-        listOf(
-            "samsung", "xiaomi", "redmi", "poco", "oppo", "oneplus", "realme", "vivo", "iqoo", "honor",
-            "huawei", "tecno", "infinix", "itel"
-        )
-
-    fun isVendorSkin(manufacturer: String = Build.MANUFACTURER, brand: String = Build.BRAND): Boolean {
-        val names = listOf(manufacturer.lowercase(), brand.lowercase())
-        return vendorSkins.any { skin -> names.any { it.startsWith(skin) } }
-    }
-
     fun shared(): List<Intent> = listOf(
         Intent(HiddenActions.LOCATION_SCANNING),
         Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
@@ -33,7 +21,7 @@ internal object ScanScreens {
     @StringRes
     fun instruction(@StringRes menu: Int, @StringRes entry: Int, @StringRes direct: Int, @StringRes vendor: Int): Int =
         when {
-            isVendorSkin() -> vendor
+            VendorSkin.matches() -> vendor
             Build.VERSION.SDK_INT < Build.VERSION_CODES.O -> menu
             Build.VERSION.SDK_INT < Build.VERSION_CODES.P -> entry
             else -> direct
@@ -64,7 +52,7 @@ object WifiScanSetting : Setting {
     // The shared screen only saves a trip while Bluetooth scanning is on too.
     override fun guideIntents(context: Context): List<Intent> {
         val bleScanOn = SettingsReader.global(context.contentResolver, HiddenKeys.BLE_SCAN_ALWAYS_ENABLED) == 1
-        val direct = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && !ScanScreens.isVendorSkin() && !bleScanOn
+        val direct = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && !VendorSkin.matches() && !bleScanOn
         return if (direct) listOf(Intent(HiddenActions.WIFI_SCANNING)) + ScanScreens.shared() else ScanScreens.shared()
     }
 }

@@ -87,8 +87,14 @@
     <string name="detail_voice_assistant">Accesso al microfono: %1$s</string>
     <string name="instruction_screen_lock">Imposta un PIN di almeno 6 cifre o una password.</string>
     <string name="instruction_biometrics">Elimina impronte e volto (potresti essere costretto a usarli).</string>
-    <string name="instruction_lockscreen_notifications">Scegli «Non mostrare le notifiche», oppure disattiva «Notifiche sensibili» se hai un blocco schermo.</string>
+    <string name="instruction_lockscreen_notifications">Con un blocco schermo, disattiva «Notifiche sensibili».</string>
     <string name="instruction_lock_delay">Il telefono deve bloccarsi entro 1 minuto: riduci lo «Spegnimento dello schermo», imposta «Blocca dopo lo spegnimento dello schermo» su Immediatamente e attiva «Blocca con tasto accensione».</string>
+    <string name="instruction_lockscreen_notifications_v6">Con un blocco schermo, in «Con dispositivo bloccato» scegli «Nascondi contenuti sensibili della notifica».</string>
+    <string name="instruction_lockscreen_notifications_v7">Con un blocco schermo, in «Sulla schermata di blocco» scegli «Nascondi contenuti sensibili delle notifiche».</string>
+    <string name="instruction_lockscreen_notifications_v9">Con un blocco schermo, in «Nella schermata di blocco» scegli «Nascondi contenuti sensibili».</string>
+    <string name="instruction_lockscreen_notifications_v10">Con un blocco schermo, disattiva «Notifiche sensibili».</string>
+    <string name="instruction_lockscreen_notifications_v16">Con un blocco schermo, disattiva «Mostra contenuti sensibili».</string>
+    <string name="instruction_lockscreen_notifications_vendor">Con un blocco schermo, nascondi il contenuto delle notifiche sulla schermata di blocco (impostazioni delle notifiche).</string>
     <string name="instruction_encryption">Attiva la crittografia e un blocco schermo.</string>
     <string name="instruction_developer_options">Disattiva «Usa Opzioni sviluppatore» (interruttore in alto).</string>
     <string name="instruction_security_patch">Installa gli aggiornamenti. Se non ce ne sono, il telefono non è più supportato.</string>

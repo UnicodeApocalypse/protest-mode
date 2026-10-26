@@ -2,14 +2,23 @@ package app.protestmode.setting
 
 import android.content.Context
 import android.content.Intent
-import android.provider.Settings
+import android.os.Build
 import app.protestmode.R
 
 object LockscreenNotificationsSetting : Setting {
     override val id = SettingId.LOCKSCREEN_NOTIFICATIONS
     override val titleRes = R.string.setting_lockscreen_notifications
     override val iconRes = R.drawable.ic_notifications
-    override val instructionRes = R.string.instruction_lockscreen_notifications
+    override val instructionRes
+        get() = when {
+            VendorSkin.matches() -> R.string.instruction_lockscreen_notifications_vendor
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.N -> R.string.instruction_lockscreen_notifications_v6
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.P -> R.string.instruction_lockscreen_notifications_v7
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.Q -> R.string.instruction_lockscreen_notifications_v9
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.S -> R.string.instruction_lockscreen_notifications_v10
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.BAKLAVA -> R.string.instruction_lockscreen_notifications
+            else -> R.string.instruction_lockscreen_notifications_v16
+        }
     override val onLabelRes = R.string.state_content_visible
     override val offLabelRes = R.string.state_content_hidden
     override val observedUris =
@@ -47,10 +56,11 @@ object LockscreenNotificationsSetting : Setting {
         else -> SettingState.UNKNOWN
     }
 
+    // The Lock screen page (API 31+) lacks the "Sensitive notifications" switch, and OxygenOS asks for the
+    // screen lock before opening it. AOSP and every documented skin keep these options under Notifications;
+    // API 36 adds a dedicated page.
     override fun guideIntents(context: Context): List<Intent> = listOf(
-        Intent(HiddenActions.LOCK_SCREEN),
-        Intent(HiddenActions.NOTIFICATION),
-        Intent(Settings.ACTION_DISPLAY_SETTINGS),
-        Intent(Settings.ACTION_SECURITY_SETTINGS)
+        Intent(HiddenActions.LOCK_SCREEN_NOTIFICATIONS),
+        Intent(HiddenActions.NOTIFICATION)
     )
 }
