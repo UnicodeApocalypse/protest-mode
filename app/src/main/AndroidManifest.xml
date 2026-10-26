@@ -102,19 +102,10 @@
             <action android:name="android.settings.LOCATION_SOURCE_SETTINGS" />
         </intent>
         <intent>
-            <action android:name="android.settings.WIFI_SCANNING_SETTINGS" />
-        </intent>
-        <intent>
             <action android:name="android.settings.LOCATION_SCANNING_SETTINGS" />
         </intent>
         <intent>
-            <action android:name="android.settings.WIFI_IP_SETTINGS" />
-        </intent>
-        <intent>
             <action android:name="android.settings.TETHER_SETTINGS" />
-        </intent>
-        <intent>
-            <action android:name="android.settings.BLUETOOTH_SCANNING_SETTINGS" />
         </intent>
         <intent>
             <action android:name="android.settings.ADVANCED_CONNECTED_DEVICE_SETTINGS" />

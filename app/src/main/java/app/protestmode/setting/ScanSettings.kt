@@ -6,6 +6,14 @@ import android.content.pm.PackageManager
 import android.provider.Settings
 import app.protestmode.R
 
+// Both scans share one screen: "Scanning", with both switches (API 28-30), then "Location services", which
+// links to each (API 31+). AOSP has a direct action for Wi-Fi scanning only (API 33+) and none for
+// Bluetooth scanning, so both settings open the shared screen; before API 28 it is reached from Location.
+private fun scanningScreens(): List<Intent> = listOf(
+    Intent(HiddenActions.LOCATION_SCANNING),
+    Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+)
+
 object WifiScanSetting : Setting {
     override val id = SettingId.WIFI_SCAN
     override val titleRes = R.string.setting_wifi_scan
@@ -21,12 +29,7 @@ object WifiScanSetting : Setting {
         )
     )
 
-    override fun guideIntents(context: Context): List<Intent> = listOf(
-        Intent(HiddenActions.WIFI_SCANNING),
-        Intent(HiddenActions.LOCATION_SCANNING),
-        Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS),
-        Intent(Settings.ACTION_WIFI_IP_SETTINGS)
-    )
+    override fun guideIntents(context: Context): List<Intent> = scanningScreens()
 }
 
 object BleScanSetting : Setting {
@@ -45,9 +48,5 @@ object BleScanSetting : Setting {
         )
     )
 
-    override fun guideIntents(context: Context): List<Intent> = listOf(
-        Intent(HiddenActions.BLUETOOTH_SCANNING),
-        Intent(HiddenActions.LOCATION_SCANNING),
-        Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
-    )
+    override fun guideIntents(context: Context): List<Intent> = scanningScreens()
 }
